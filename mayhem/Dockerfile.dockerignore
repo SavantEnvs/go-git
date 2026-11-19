@@ -1,0 +1,10 @@
+# Build context for mayhem/Dockerfile: the FULL repo, .git history included (the grader uses it);
+# only local build scratch and editor/OS cruft are left out.
+mayhem-build/
+ctrf-report.json
+*.o
+*.a
+*.so
+.DS_Store
+*.swp
+*~
