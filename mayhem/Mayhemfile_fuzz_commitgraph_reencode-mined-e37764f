@@ -1,0 +1,11 @@
+# commitgraph.OpenFileIndex -> commitgraph.Encoder.Encode (plumbing/format/commitgraph) — decode a
+# commit-graph file, then re-encode it
+project: savantenvs/go-git
+target: fuzz_commitgraph_reencode-mined-e37764f
+cmds:
+  - cmd: /mayhem/fuzz_commitgraph_reencode
+    libfuzzer: true
+    timeout: 5
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_commitgraph_reencode-mined-e37764f/testsuite
